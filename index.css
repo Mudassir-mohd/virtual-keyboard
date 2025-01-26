@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #69b5cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.keyboard-container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.output {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
+.key {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.key:hover {
+    background-color: #2980b9;
+}
+
+.backspace {
+    grid-column: span 2;
+    background-color: #e74c3c;
+}
+
+.backspace:hover {
+    background-color: #c0392b;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .keyboard {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .keyboard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
